@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Neon Music Player</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+
+  <div class="sidebar">
+
+    <h2>
+      <i class="fa-solid fa-music"></i>
+      Playlist
+    </h2>
+
+    <div class="playlist" id="playlist"></div>
+
+  </div>
+
+  <!-- MAIN PLAYER -->
+
+  <div class="main-player">
+
+    <!-- TOP -->
+
+    <div class="top-bar">
+
+      <div class="search">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input type="text"
+        placeholder="Search songs, artists...">
+
+      </div>
+
+      <div class="profile">
+        <i class="fa-solid fa-user"></i>
+      </div>
+
+    </div>
+
+    <!-- PLAYER CONTENT -->
+
+    <div class="player-content">
+
+      <!-- LEFT -->
+
+      <div class="album-section">
+
+        <div class="vinyl"></div>
+
+        <img id="cover"
+        src="images/cover1.jpg">
+
+      </div>
+
+      <!-- RIGHT -->
+
+      <div class="song-info">
+
+        <h1 id="title">
+          Blinding Lights
+        </h1>
+
+        <h3 id="artist">
+          The Weeknd
+        </h3>
+
+        <div class="music-bars">
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </div>
+
+        <!-- TIMER -->
+
+        <div class="timer">
+
+          <span id="current-time">
+            0:00
+          </span>
+
+          <span id="duration">
+            0:00
+          </span>
+
+        </div>
+
+        <!-- PROGRESS -->
+
+        <div class="progress-container"
+        id="progress-container">
+
+          <div class="progress"
+          id="progress"></div>
+
+        </div>
+
+        <!-- CONTROLS -->
+
+        <div class="controls">
+
+          <button id="prev">
+            <i class="fa-solid fa-backward"></i>
+          </button>
+
+          <button id="play"
+          class="play-btn">
+
+            <i class="fa-solid fa-play"></i>
+
+          </button>
+
+          <button id="next">
+            <i class="fa-solid fa-forward"></i>
+          </button>
+
+        </div>
+
+        <!-- VOLUME -->
+
+        <div class="volume-container">
+
+          <i class="fa-solid fa-volume-high"></i>
+
+          <input type="range"
+          id="volume"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<audio id="audio"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
